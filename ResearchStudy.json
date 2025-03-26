@@ -10,7 +10,15 @@
         "id": "ResearchStudy-1",
         "title": "Some describing title",
         "status": "active",
-        "description": "An informal description of the study."
+        "description": "An informal description of the study.",
+        "enrollment": [
+          {
+            "reference": "Group/Group-1"
+          },
+          {
+            "reference": "Group/Group-2"
+          }
+        ]
       }
     },
     {
@@ -81,7 +89,13 @@
               "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
               "code": {
                 "operator": "$in",
-                "code": ["E10", "E11", "E12", "E13", "E14"]
+                "value": [
+                  "E10",
+                  "E11",
+                  "E12",
+                  "E13",
+                  "E14"
+                ]
               }
             }
           ]
@@ -96,13 +110,19 @@
       "resource": {
         "resourceType": "Observation",
         "id": "Observation-1",
-        "status": "final",
+        "status": {
+          "operator": "$eq",
+          "value": "final"
+        },
         "category": [
           {
             "coding": [
               {
                 "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory"
+                "code": {
+                  "operator": "$eq",
+                  "value": "laboratory"
+                }
               }
             ]
           }
@@ -111,7 +131,10 @@
           "coding": [
             {
               "system": "https://loinc.org/",
-              "code": "LG7967-5"
+              "code": {
+                "operator": "$eq",
+                "value": "LG7967-5"
+              }
             }
           ]
         },
@@ -207,7 +230,13 @@
               "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
               "code": {
                 "operator": "$nin",
-                "value": ["E10", "E11", "E12", "E13", "E14"]
+                "value": [
+                  "E10",
+                  "E11",
+                  "E12",
+                  "E13",
+                  "E14"
+                ]
               }
             }
           ]
@@ -243,13 +272,19 @@
       "resource": {
         "resourceType": "Observation",
         "id": "Observation-2",
-        "status": "final",
+        "status": {
+          "operator": "$eq",
+          "value": "final"
+        },
         "category": [
           {
             "coding": [
               {
                 "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code": "laboratory"
+                "code": {
+                  "operator": "$eq",
+                  "value": "laboratory"
+                }
               }
             ]
           }
@@ -258,7 +293,10 @@
           "coding": [
             {
               "system": "https://loinc.org/",
-              "code": "LG7967-5"
+              "code": {
+                "operator": "$eq",
+                "value": "LG7967-5"
+              }
             }
           ]
         },
