@@ -1,6 +1,7 @@
-# Supplement Material for Paper "Towards Formalized Study Parameters for Medical Research"
+# Supplement Material
 
-The supplement Material contains 
+Supplement Material for the following publications
 
-- the [specification document](./ResearchStudy.json)
-- the images of the user-interface prototype for [laboratory](./Laboratory.png), [condition](./Condition.png) and an overview of [cohorts](./Cohorts.png) in a human-readable format
+- [Towards Formalized Study Parameters for Medical Research](./Towards Formalized Study Parameters/README.md)
+- [A FHIR Specification to Formalize Cohort Definitions](./Formalize Cohort Definitions/README.md)
+
